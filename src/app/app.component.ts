@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'form';
+
+  msg:string="";
+   
+  submit(form:any){    
+    console.log(form.firstName);
+    console.log(form.lastName);
+    console.log(form.comment);
+    this.msg="Contact Form Submitted For "+form.firstName;
+}
 }
